@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Medicine Management System</h1>
+
+    <!-- Add Medicine Form -->
+    <h2>Add Medicine</h2>
+    <form id="addMedicineForm">
+      <label for="medicineName">Medicine Name:</label>
+      <input type="text" id="medicineName" required />
+
+      <label for="medicineWeight">Weight (per unit):</label>
+      <input type="number" id="medicineWeight" required />
+
+      <label for="medicineQuantity">Quantity:</label>
+      <input type="number" id="medicineQuantity" required />
+
+      <label for="medicineCost">Cost (per unit):</label>
+      <input type="number" id="medicineCost" required />
+
+      <label for="drawerSelect">Choose Drawer:</label>
+      <select id="drawerSelect" required></select>
+
+      <button type="submit">Add Medicine</button>
+    </form>
+
+    <!-- Search Medicine Form -->
+    <h2>Search Medicine</h2>
+    <input type="text" id="searchMedicine" placeholder="Enter medicine name to search">
+    <button onclick="searchMedicine()">Search</button>
+
+    <div id="searchResult"></div>
+
+    <!-- Remove Medicine Form -->
+    <h2>Remove Medicine</h2>
+    <!-- Remove Medicine Form -->
+<form id="removeMedicineForm">
+  <label for="removeMedicineName">Medicine Name:</label>
+  <input type="text" id="removeMedicineName" required>
+  <label for="removeMedicineQuantity">Quantity to Remove:</label>
+  <input type="number" id="removeMedicineQuantity" min="1" required>
+  <button type="submit">Remove Medicine</button>
+</form>
+
+    <button id="downloadCSV">Download CSV</button>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
